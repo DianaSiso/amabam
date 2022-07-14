@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Amabam</string>
+    <string name="game_one">Hangman</string>
+    <string name="game_two">Wordle</string>
+    <string name="game_three">Square Colors</string>
+    <string name="square_reset">Reset</string>
+    <string name="square_save">Save</string>
+    <string name="hangman_reset">Reset</string>
+    <string name="hangman_save">Save</string>
+    <string name="categories_animals">Animals</string>
+    <string name="categories_fruits">Fruits</string>
+    <string name="categories_flowers">Flowers</string>
+    <string name="categories_countries">Countries</string>
+    <string name="categories_colors">Colors</string>
+    <string name="categories_random">Random</string>
+
+</resources>

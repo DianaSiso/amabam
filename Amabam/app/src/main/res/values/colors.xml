@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="group_1_a">#8c9bf6</color>
+    <color name="group_1_b">#7285f9</color>
+    <color name="group_2_a">#182eb0</color>
+    <color name="group_2_b">#16299c</color>
+    <color name="group_3_a">#555f99</color>
+    <color name="group_3_b">#4a569a</color>
+    <color name="group_4_a">#203ce4</color>
+    <color name="group_4_b">#102cd7</color>
+    <color name="group_5_a">#0a6b6d</color>
+    <color name="group_5_b">#14797c</color>
+    <color name="group_6_a">#0b494b</color>
+    <color name="group_6_b">#024344</color>
+    <color name="group_7_a">#08888c</color>
+    <color name="group_7_b">#40898b</color>
+    <color name="group_8_a">#1a979b</color>
+    <color name="group_8_b">#11a1a5</color>
+    <color name="group_9_a">#10c3c8</color>
+    <color name="group_9_b">#50c4c7</color>
+    <color name="group_10_a">#8dd3d5</color>
+    <color name="group_10_b">#9fdddf</color>
+    <color name="group_11_a">#87eaed</color>
+    <color name="group_11_b">#6af2f6</color>
+    <color name="group_12_a">#15ebf1</color>
+    <color name="group_12_b">#00f8ff</color>
+    <color name="group_13_a">#00ffb4</color>
+    <color name="group_13_b">#12f1af</color>
+    <color name="group_14_a">#0ce732</color>
+    <color name="group_14_b">#03f92d</color>
+    <color name="group_15_a">#27d544</color>
+    <color name="group_15_b">#4dd063</color>
+    <color name="group_16_a">#acf47e</color>
+    <color name="group_16_b">#9edf73</color>
+    <color name="group_17_a">#30640d</color>
+    <color name="group_17_b">#235901</color>
+    <color name="group_18_a">#adbd18</color>
+    <color name="group_18_b">#b5c808</color>
+    <color name="group_19_a">#f2d836</color>
+    <color name="group_19_b">#ffdb00</color>
+    <color name="group_20_a">#ffa92c</color>
+    <color name="group_20_b">#ff9a0a</color>
+
+    <!-- light mode -->
+    <color name="light_button_background">#fa9191</color>
+    <color name="light_button_text">#9f1e1e</color>
+    <color name="light_button_hangman">#4794c8</color>
+    <color name="light_button_keyboard">#e7bc63</color>
+
+</resources>
