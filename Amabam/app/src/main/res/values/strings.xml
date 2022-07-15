@@ -13,5 +13,6 @@
     <string name="categories_countries">Countries</string>
     <string name="categories_colors">Colors</string>
     <string name="categories_random">Random</string>
+    <string name="wordle_enter">Enter</string>
 
 </resources>

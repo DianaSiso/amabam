@@ -25,4 +25,9 @@ public class home_games extends AppCompatActivity {
         Intent intent = new Intent(this, categories_hangman.class);
         startActivity(intent);
     }
+
+    public void wordle(View view) {
+        Intent intent = new Intent(this, wordle_game.class);
+        startActivity(intent);
+    }
 }

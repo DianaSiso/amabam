@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_categories_hangman.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_hangman_game.xml" value="0.25" />
+        <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_hangman_game.xml" value="0.1" />
         <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_home_games.xml" value="0.264" />
         <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_square_colors_game.xml" value="0.1678832116788321" />
+        <entry key="..\:/Users/diana/AndroidStudioProjects/Amabam/app/src/main/res/layout/activity_wordle_game.xml" value="0.2" />
       </map>
     </option>
   </component>
