@@ -2,6 +2,7 @@ package com.example.amabam.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Layout;
@@ -24,6 +25,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class wordle_game extends AppCompatActivity {
+
+    @Override
+    public void onBackPressed() {
+        // disable back button
+    }
 
     String word = "";
     String[] words_list = null;
@@ -71,8 +77,7 @@ public class wordle_game extends AppCompatActivity {
             error.setVisibility(View.INVISIBLE);
             check_word(guess_text);
         }
-
-        // TODO: verificar que o numero de tentativas for 6 ent game over
+        guess.setText("");
     }
 
     private void check_word(String guess) {
@@ -90,36 +95,91 @@ public class wordle_game extends AppCompatActivity {
                 // check if word contains the letter, if not, disable key
                 if (!word.contains(String.valueOf(guess.charAt(y)))) {
                     disable_key(String.valueOf(guess.charAt(y)));
-                    // TODO: não está a desativar as teclas
-                    // ERROR
                     button_to_change.setBackgroundColor(Color.parseColor("#ef5757"));
                 } else {
                     button_to_change.setBackgroundColor(Color.parseColor("#facd7b"));
                 }
             }
-
-
         }
-        // TODO: verificar que o numero de letras corretas é menor que 5, se não, win
+        if (correct_letters == 5) {
+            win();
+            return;
+        }
+        if (tries + 1 == 6) {
+            game_over();
+        }
     }
 
-    private void disable_key(String letter) {
-        LinearLayout first_layout = findViewById(R.id.first_line_wordle);
-        LinearLayout second_layout = findViewById(R.id.second_line_wordle);
-        LinearLayout third_layout = findViewById(R.id.third_line_wordle);
-        LinearLayout fourth_layout = findViewById(R.id.fourth_line_wordle);
+    private void game_over() {
+        disable_keyboard();
+        TextView result = findViewById(R.id.result_text);
+        result.setText("GAME OVER");
+        result.setVisibility(View.VISIBLE);
+    }
+
+    private void win() {
+        disable_keyboard();
+        TextView result = findViewById(R.id.result_text);
+        String text_to_result = tries+1 + "/6 - CONGRATULATIONS";
+        result.setText(text_to_result);
+        result.setVisibility(View.VISIBLE);
+    }
+
+    private void disable_keyboard() {
+        LinearLayout first_layout = findViewById(R.id.first_line);
+        LinearLayout second_layout = findViewById(R.id.second_line);
+        LinearLayout third_layout = findViewById(R.id.third_line);
+        LinearLayout fourth_layout = findViewById(R.id.fourth_line);
         int count_first = first_layout.getChildCount();
         int count_second = second_layout.getChildCount();
         int count_third = third_layout.getChildCount();
         int count_fourth = fourth_layout.getChildCount();
         View button_to_change = null;
+
+        for(int i=0; i<count_first; i++) {
+            button_to_change = first_layout.getChildAt(i);
+            button_to_change.setClickable(false);
+            button_to_change.setBackgroundColor(Color.parseColor("#505050"));
+        }
+        for(int i=0; i<count_second; i++) {
+            button_to_change = second_layout.getChildAt(i);
+            button_to_change.setClickable(false);
+            button_to_change.setBackgroundColor(Color.parseColor("#505050"));
+
+        }
+        for(int i=0; i<count_third; i++) {
+            button_to_change = third_layout.getChildAt(i);
+            button_to_change.setClickable(false);
+            button_to_change.setBackgroundColor(Color.parseColor("#505050"));
+        }
+        for(int i=0; i<count_fourth; i++) {
+            button_to_change = fourth_layout.getChildAt(i);
+            button_to_change.setClickable(false);
+            button_to_change.setBackgroundColor(Color.parseColor("#505050"));
+        }
+        Button enter_button = findViewById(R.id.wordle_enter);
+        enter_button.setBackgroundColor(Color.parseColor("#505050"));
+        enter_button.setClickable(false);
+        enter_button.setTextColor(Color.parseColor("#000000"));
+    }
+
+    private void disable_key(String letter) {
+        LinearLayout first_layout = findViewById(R.id.first_line);
+        LinearLayout second_layout = findViewById(R.id.second_line);
+        LinearLayout third_layout = findViewById(R.id.third_line);
+        LinearLayout fourth_layout = findViewById(R.id.fourth_line);
+        int count_first = first_layout.getChildCount();
+        int count_second = second_layout.getChildCount();
+        int count_third = third_layout.getChildCount();
+        int count_fourth = fourth_layout.getChildCount();
+        View button_to_change = null;
+
         for(int i=0; i<count_first; i++) {
             button_to_change = first_layout.getChildAt(i);
             Button button_to_change_text = (Button) button_to_change;
             if (button_to_change_text.getText().toString().equals(letter)) {
-                Log.d("DEBUG_WORDLE equals", letter);
-                button_to_change_text.setClickable(false);
-                button_to_change_text.setBackgroundColor(Color.parseColor("#505050"));
+                button_to_change.setClickable(false);
+                button_to_change.setBackgroundColor(Color.parseColor("#505050"));
                 return;
             }
         }
@@ -767,5 +827,10 @@ public class wordle_game extends AppCompatActivity {
         Random rand = new Random();
         int idx = rand.nextInt(words_list.length);
         return words_list[idx];
+    }
+
+    public void click_to_home(View view) {
+        Intent intent = new Intent(this, home_games.class);
+        startActivity(intent);
     }
 }

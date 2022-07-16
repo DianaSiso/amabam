@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18248414021",
+    "project_id": "amabam-6036b",
+    "storage_bucket": "amabam-6036b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18248414021:android:0e3fa3bc9c8ef91584442c",
+        "android_client_info": {
+          "package_name": "com.example.amabam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18248414021-uijiaa3nugo00571q8en2h6k1tesj1b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU3c-TGbFLHc_fDL8mbIl8gpZ6y6zH350"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18248414021-uijiaa3nugo00571q8en2h6k1tesj1b1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

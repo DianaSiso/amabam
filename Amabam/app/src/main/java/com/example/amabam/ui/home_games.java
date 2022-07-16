@@ -11,6 +11,11 @@ import com.example.amabam.R;
 public class home_games extends AppCompatActivity {
 
     @Override
+    public void onBackPressed() {
+        // disable back button
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_games);

@@ -22,6 +22,11 @@ import java.util.Random;
 
 public class square_colors_game extends AppCompatActivity {
 
+    @Override
+    public void onBackPressed() {
+        // disable back button
+    }
+
     ArrayList<Button> buttons_list = new ArrayList<>();
     HashMap<Integer, String[]> colors_dict = new HashMap<>();
     int chosen_button;
@@ -251,6 +256,11 @@ public class square_colors_game extends AppCompatActivity {
 
     public void reset_button(View view) {
         Intent intent = new Intent(this, square_colors_game.class);
+        startActivity(intent);
+    }
+
+    public void click_to_home(View view) {
+        Intent intent = new Intent(this, home_games.class);
         startActivity(intent);
     }
 }

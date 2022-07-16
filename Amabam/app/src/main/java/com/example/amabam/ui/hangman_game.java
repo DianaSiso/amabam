@@ -30,6 +30,11 @@ public class hangman_game extends AppCompatActivity {
     String category = "";
 
     @Override
+    public void onBackPressed() {
+        // disable back button
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hangman_game);
@@ -197,6 +202,11 @@ public class hangman_game extends AppCompatActivity {
     public void reset_button(View view) {
         Intent intent = new Intent(this, hangman_game.class);
         intent.putExtra("category", category);
+        startActivity(intent);
+    }
+
+    public void click_to_home(View view) {
+        Intent intent = new Intent(this, home_games.class);
         startActivity(intent);
     }
 }

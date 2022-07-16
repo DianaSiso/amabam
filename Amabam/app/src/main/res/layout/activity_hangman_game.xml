@@ -19,6 +19,18 @@
 
             <Space
                 android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageButton
+                android:id="@+id/home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="click_to_home"
+                app:srcCompat="@drawable/ic_baseline_home_24" />
+
+            <Space
+                android:layout_width="match_parent"
                 android:layout_height="60dp" />
 
             <LinearLayout

@@ -14,5 +14,12 @@
     <string name="categories_colors">Colors</string>
     <string name="categories_random">Random</string>
     <string name="wordle_enter">Enter</string>
+    <string name="login_username">Username</string>
+    <string name="register_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="register_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 
 </resources>
